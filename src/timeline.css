@@ -13,3 +13,11 @@
   height: 100%;
   width: 0;
 }
+
+.timelineWrapper .rangeControl {
+  width: 100%;
+}
+
+.timelineWrapper .rangeControl.hidden {
+  display: none;
+}

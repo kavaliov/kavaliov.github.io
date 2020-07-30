@@ -18,6 +18,8 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
 
     // range control
     const rangeControl = document.createElement("input");
+    rangeControl.classList.add("rangeControl");
+    rangeControl.classList.add("hidden");
     rangeControl.type = "range";
     rangeControl.value = "0";
     rangeControl.min = "0";
@@ -27,11 +29,16 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
     container.appendChild(progressBar);
     container.appendChild(rangeControl);
 
-    return {image, progress, rangeControl};
+    return {image, progressBar, progress, rangeControl};
   };
 
   const setProgressPercentage = (percentage) => {
     progress.style.width = percentage + "%";
+
+    if (percentage === 100) {
+      rangeControl.classList.remove("hidden");
+      progressBar.remove();
+    }
   }
 
   const generateFrameData = (folder = "", file = "", count = 0) => {
@@ -61,7 +68,7 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
         if (index !== -1) {
           list.splice(index, 1);
         }
-        setProgressPercentage(Math.ceil(100 * i / frameData.length));
+        setProgressPercentage(100 - (100 * list.length / frameData.length));
       }
 
       list.push(img);
@@ -70,10 +77,10 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
   }
 
   const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(frameFolder, firstFrameName, frameCount);
-  const {image, progress, rangeControl} = initLayout(containerId, frameCount);
+  const {image, progressBar, progress, rangeControl} = initLayout(containerId, frameCount);
   cacheImages(frameData);
 
-  rangeControl.addEventListener("input", function (e) {
+  rangeControl.addEventListener("input", function () {
     image.src = `./${frameFolder}/${fileNamePattern}.${("000" + this.value).slice(-4)}${fileExt}`;
   })
 }
