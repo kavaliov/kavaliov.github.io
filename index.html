@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Timeline</title>
+  <link  href="src/timeline.css" rel="stylesheet" type="text/css">
+  <script src="src/timeline.js"></script>
+  <style>
+    #timeline {
+      width: 640px;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+<div id="timeline"></div>
+</body>
+
+<script>
+  timeline({
+    containerId: "timeline",
+    frameCount: 300,
+    frameFolder: "data",
+    firstFrameName: "continental-oceanic.0000.jpg"
+  });
+</script>
+</html>

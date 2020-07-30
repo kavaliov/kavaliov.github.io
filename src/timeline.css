@@ -1,0 +1,15 @@
+.timelineWrapper {
+  position: relative;
+}
+
+.timelineWrapper .progressBar {
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.timelineWrapper .progressBar .progress {
+  background: linear-gradient(to right, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
+  height: 100%;
+  width: 0;
+}
