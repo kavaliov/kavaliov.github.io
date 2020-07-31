@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8687017b-df4b-4e51-8a69-618b1cbe8f78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +39,7 @@
       <workItem from="1596131426999" duration="9870000" />
       <workItem from="1596151146300" duration="2343000" />
       <workItem from="1596186000122" duration="11579000" />
-      <workItem from="1596224881588" duration="4577000" />
+      <workItem from="1596224881588" duration="5348000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1596151172178</created>
@@ -92,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596214482885</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="periods">
+      <created>1596231710092</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596231710092</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,20 +111,21 @@
     <MESSAGE value="autostart fix" />
     <MESSAGE value="12 fps vs 24 fps" />
     <MESSAGE value="plates video" />
-    <option name="LAST_COMMIT_MESSAGE" value="plates video" />
+    <MESSAGE value="periods" />
+    <option name="LAST_COMMIT_MESSAGE" value="periods" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2" timestamp="1596214482428">
+    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2" timestamp="1596231709918">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2/0.23.1920.1008@0.23.1920.1008" timestamp="1596214482428" />
-    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose" timestamp="1596214486946">
+    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2/0.23.1920.1008@0.23.1920.1008" timestamp="1596231709918" />
+    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose" timestamp="1596231726480">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose/0.23.1920.1008@0.23.1920.1008" timestamp="1596214486946" />
-    <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1596214484735">
+    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose/0.23.1920.1008@0.23.1920.1008" timestamp="1596231726480" />
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1596231711662">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1008@0.23.1920.1008" timestamp="1596214484735" />
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1008@0.23.1920.1008" timestamp="1596231711662" />
   </component>
 </project>
