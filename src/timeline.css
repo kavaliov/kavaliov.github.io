@@ -1,5 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
 .timelineWrapper {
+  width: 640px;
   position: relative;
+  margin: 0 auto;
 }
 
 .timelineWrapper .timelineImage {
@@ -8,7 +16,7 @@
 
 .timelineWrapper .progressBar {
   top: 0;
-  left: 0;
+  right: 0;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -16,10 +24,32 @@
   opacity: 0.4;
 }
 
-.timelineWrapper .rangeControl {
-  width: 100%;
+.timelineWrapper .controlsWrapper {
+  display: flex;
+  margin-top: 10px;
 }
 
-.timelineWrapper .rangeControl.hidden {
+.timelineWrapper .controlsWrapper .rangeControl {
+  flex: 1;
+}
+
+.timelineWrapper .controlsWrapper .playButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+  font-size: 13px;
+  border: 1px solid #006c96;
+  background: white;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.timelineWrapper .controlsWrapper .playButton:hover {
+  border: 1px solid #00a2e0;
+  background: #daf5ff;
+}
+
+.timelineWrapper .hidden {
   display: none;
 }
