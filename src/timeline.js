@@ -26,13 +26,6 @@ function timeline(
 
   let currentFrame = 0;
   let isPlaying = false;
-  let currentMillisecond = 0;
-
-  // setInterval(() => {
-  //   if (periods[currentMillisecond])
-  //     console.log(periods[currentMillisecond]);
-  //   currentMillisecond += 100;
-  // }, 100);
 
   const initLayout = (layoutContainer, rangeMax) => {
     const container = document.getElementById(layoutContainer);
@@ -44,8 +37,13 @@ function timeline(
 
     // image
     const image = document.createElement("img");
-    image.src = `${window.location.href}${frameFolder}/${firstFrameName}`;
+    image.src = `./${frameFolder}/${firstFrameName}`;
     image.classList.add("timelineImage");
+
+    // period title
+    const periodTitle = document.createElement("div");
+    periodTitle.classList.add("periodTitle");
+    periodTitle.innerText = "Please wait, loading...";
 
     // controls wrapper
     const controlsWrapper = document.createElement("div");
@@ -68,19 +66,22 @@ function timeline(
     controlsWrapper.appendChild(playButton);
     controlsWrapper.appendChild(rangeControl);
 
+    container.appendChild(periodTitle);
     container.appendChild(image);
     container.appendChild(progressBar);
     container.appendChild(controlsWrapper);
 
-    return {image, progressBar, controlsWrapper, rangeControl, playButton};
+    return {image, periodTitle, progressBar, controlsWrapper, rangeControl, playButton};
   };
 
   const setProgressLoading = (percentage) => {
     progressBar.style.width = percentage + "%";
+    periodTitle.innerText = `Please wait, loading... ${Math.ceil(100 - percentage)}%`;
 
     if (percentage === 0) {
       controlsWrapper.classList.remove("hidden");
       progressBar.remove();
+      periodTitle.innerText = periods[0];
       if (autoPlay) playerStart();
     }
   }
@@ -121,6 +122,8 @@ function timeline(
     currentFrame = frame;
     rangeControl.value = frame;
     image.src = `./${frameFolder}/${fileNamePattern}.${("000" + frame).slice(-4)}${fileExt}`;
+    if (periods[frame])
+      periodTitle.innerText = periods[frame];
   }
 
   const player = () => {
@@ -153,13 +156,26 @@ function timeline(
     return {start, pause};
   };
 
+  const findPeriod = (frame) => {
+
+  }
+
 
   const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(frameFolder, firstFrameName, frameCount);
-  const {image, progressBar, controlsWrapper, playButton, rangeControl} = initLayout(containerId, frameCount);
+  const {image, progressBar, periodTitle, controlsWrapper, playButton, rangeControl} = initLayout(containerId, frameCount);
   const {start: playerStart, pause: playerPause} = player();
   cacheImages(frameData);
 
+  setTimeout(() => {
+    cacheImages(frameData);
+  }, 480000)
+
   rangeControl.addEventListener("input", function () {
+    playerPause();
+    setFrame(+this.value);
+  })
+
+  rangeControl.addEventListener("change", function () {
     playerPause();
     setFrame(+this.value);
   })
