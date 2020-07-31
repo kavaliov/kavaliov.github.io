@@ -64,6 +64,7 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
     if (percentage === 0) {
       controlsWrapper.classList.remove("hidden");
       progressBar.remove();
+      if (autoPlay) playerStart();
     }
   }
 
@@ -136,10 +137,8 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
 
   const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(frameFolder, firstFrameName, frameCount);
   const {image, progressBar, controlsWrapper, playButton, rangeControl} = initLayout(containerId, frameCount);
-  cacheImages(frameData);
   const {start: playerStart, pause: playerPause} = player();
-
-  if (autoPlay) playerStart();
+  cacheImages(frameData);
 
   rangeControl.addEventListener("input", function () {
     playerPause();
