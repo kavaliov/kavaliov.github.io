@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8687017b-df4b-4e51-8a69-618b1cbe8f78" name="Default Changelist" comment="" />
+    <list default="true" id="8687017b-df4b-4e51-8a69-618b1cbe8f78" name="Default Changelist" comment="init">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeline.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/timeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/timeline.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1fPtCD5Fmxm2PKYmqu9lWoudwbh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,10 +38,45 @@
       <option name="presentableId" value="Default" />
       <updated>1596131425910</updated>
       <workItem from="1596131426999" duration="9870000" />
+      <workItem from="1596151146300" duration="2111000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1596151172178</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596151172178</updated>
+    </task>
+    <task id="LOCAL-00002" summary="percentage fix">
+      <created>1596153034695</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596153034695</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="percentage fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="percentage fix" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="567" y="112" key="CommitChangelistDialog2" timestamp="1596153034572">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="567" y="112" key="CommitChangelistDialog2/0.23.1920.1008@0.23.1920.1008" timestamp="1596153034572" />
+    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose" timestamp="1596153040539">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose/0.23.1920.1008@0.23.1920.1008" timestamp="1596153040539" />
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1596153037096">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1008@0.23.1920.1008" timestamp="1596153037096" />
   </component>
 </project>

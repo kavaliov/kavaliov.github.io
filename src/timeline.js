@@ -7,10 +7,6 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
     const progressBar = document.createElement("div");
     progressBar.classList.add("progressBar");
 
-    const progress = document.createElement("div");
-    progress.classList.add("progress");
-    progressBar.appendChild(progress);
-
     // image
     const image = document.createElement("img");
     image.src = `${window.location.href}${frameFolder}/${firstFrameName}`;
@@ -29,13 +25,13 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
     container.appendChild(progressBar);
     container.appendChild(rangeControl);
 
-    return {image, progressBar, progress, rangeControl};
+    return {image, progressBar, rangeControl};
   };
 
   const setProgressPercentage = (percentage) => {
-    progress.style.width = percentage + "%";
+    progressBar.style.width = percentage + "%";
 
-    if (percentage === 100) {
+    if (percentage === 0) {
       rangeControl.classList.remove("hidden");
       progressBar.remove();
     }
@@ -68,7 +64,7 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
         if (index !== -1) {
           list.splice(index, 1);
         }
-        setProgressPercentage(100 - (100 * list.length / frameData.length));
+        setProgressPercentage(100 * list.length / frameData.length);
       }
 
       list.push(img);
@@ -77,7 +73,7 @@ function timeline({containerId, frameFolder, firstFrameName, frameCount}) {
   }
 
   const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(frameFolder, firstFrameName, frameCount);
-  const {image, progressBar, progress, rangeControl} = initLayout(containerId, frameCount);
+  const {image, progressBar, rangeControl} = initLayout(containerId, frameCount);
   cacheImages(frameData);
 
   rangeControl.addEventListener("input", function () {
