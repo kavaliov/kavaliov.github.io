@@ -7,7 +7,7 @@
 .timelineWrapper {
   width: 640px;
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 
 .timelineWrapper .timelineImage {

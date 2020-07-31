@@ -1,4 +1,14 @@
-function timeline({containerId, frameFolder = "data", firstFrameName, frameCount = 0, fps = 24, autoPlay = true}) {
+function timeline(
+  {
+    containerId,
+    frameFolder = "data",
+    firstFrameName,
+    frameCount = 0,
+    fps = 24,
+    autoPlay = true,
+    loop = false,
+    periods = {}
+  }) {
 
   if (!containerId) {
     console.warn("Please, set containerId");
@@ -16,6 +26,13 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
 
   let currentFrame = 0;
   let isPlaying = false;
+  let currentMillisecond = 0;
+
+  // setInterval(() => {
+  //   if (periods[currentMillisecond])
+  //     console.log(periods[currentMillisecond]);
+  //   currentMillisecond += 100;
+  // }, 100);
 
   const initLayout = (layoutContainer, rangeMax) => {
     const container = document.getElementById(layoutContainer);
@@ -82,13 +99,11 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
   }
 
   const cacheImages = (frameData) => {
-
     if (!cacheImages.list) {
       cacheImages.list = [];
     }
     let list = cacheImages.list;
     for (let i = 0; i < frameData.length; i++) {
-
       let img = new Image();
       img.onload = function () {
         let index = list.indexOf(this);
@@ -97,7 +112,6 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
         }
         setProgressLoading(100 * list.length / frameData.length);
       }
-
       list.push(img);
       img.src = frameData[i];
     }
@@ -120,6 +134,11 @@ function timeline({containerId, frameFolder = "data", firstFrameName, frameCount
           currentFrame += 1;
         } else {
           currentFrame = 0;
+          if (!loop) {
+            playButton.innerText = "Play";
+            clearInterval(interval);
+            isPlaying = false;
+          }
         }
         setFrame(currentFrame);
       }, 1000 / fps);
