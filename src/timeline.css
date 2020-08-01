@@ -3,6 +3,17 @@
   padding: 0;
   outline: none;
   font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+pre {
+  font-family: monospace;
+  width: 640px;
+  margin: 0 auto;
+  background: #f5f2f0;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .timelineWrapper {

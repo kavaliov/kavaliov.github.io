@@ -1,9 +1,9 @@
 function timeline(
   {
     containerId,
-    frameFolder = "data",
+    framesFolder = "data",
     firstFrameName,
-    frameCount = 0,
+    framesCount = 0,
     fps = 24,
     autoPlay = true,
     loop = false,
@@ -20,8 +20,8 @@ function timeline(
     return;
   }
 
-  if (frameFolder === "data") {
-    console.warn("frameFolder set by default to 'data'");
+  if (framesFolder === "data") {
+    console.warn("framesFolder set by default to 'data'");
   }
 
   let currentFrame = 0;
@@ -37,7 +37,7 @@ function timeline(
 
     // image
     const image = document.createElement("img");
-    image.src = `./${frameFolder}/${firstFrameName}`;
+    image.src = `./${framesFolder}/${firstFrameName}`;
     image.classList.add("timelineImage");
 
     // period title
@@ -121,7 +121,7 @@ function timeline(
   const setFrame = (frame) => {
     currentFrame = frame;
     rangeControl.value = frame;
-    image.src = `./${frameFolder}/${fileNamePattern}.${("000" + frame).slice(-4)}${fileExt}`;
+    image.src = `./${framesFolder}/${fileNamePattern}.${("000" + frame).slice(-4)}${fileExt}`;
     if (periods[frame])
       periodTitle.innerText = periods[frame];
   }
@@ -133,8 +133,9 @@ function timeline(
       isPlaying = true;
       playButton.innerText = "Pause";
       interval = setInterval(() => {
-        if (currentFrame < frameCount - 1) {
+        if (currentFrame < framesCount - 1) {
           currentFrame += 1;
+          setFrame(currentFrame);
         } else {
           currentFrame = 0;
           if (!loop) {
@@ -143,7 +144,6 @@ function timeline(
             isPlaying = false;
           }
         }
-        setFrame(currentFrame);
       }, 1000 / fps);
     }
 
@@ -156,19 +156,31 @@ function timeline(
     return {start, pause};
   };
 
-  const findPeriod = (frame) => {
+  const findPeriod = (arr, target) => {
+    let result = 0;
 
+    if (target >= arr[arr.length - 1]) {
+      result = arr[arr.length - 1];
+    }
+
+    if (target >= arr[0] && target < arr[1]) {
+      result = arr[0];
+    }
+
+    arr.forEach((frame, i) => {
+      if (target >= frame && target < arr[i + 1]) {
+        result = frame;
+      }
+    });
+
+    return result;
   }
 
-
-  const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(frameFolder, firstFrameName, frameCount);
-  const {image, progressBar, periodTitle, controlsWrapper, playButton, rangeControl} = initLayout(containerId, frameCount);
+  const {data: frameData, name: fileNamePattern, ext: fileExt} = generateFrameData(framesFolder, firstFrameName, framesCount);
+  const {image, progressBar, periodTitle, controlsWrapper, playButton, rangeControl} = initLayout(containerId, framesCount);
   const {start: playerStart, pause: playerPause} = player();
+  const periodTitleFrames = Object.keys(periods).map(period => +period);
   cacheImages(frameData);
-
-  setTimeout(() => {
-    cacheImages(frameData);
-  }, 480000)
 
   rangeControl.addEventListener("input", function () {
     playerPause();
@@ -178,6 +190,7 @@ function timeline(
   rangeControl.addEventListener("change", function () {
     playerPause();
     setFrame(+this.value);
+    periodTitle.innerText = periods[findPeriod(periodTitleFrames, +this.value)];
   })
 
   playButton.addEventListener("click", function () {
