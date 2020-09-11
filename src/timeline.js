@@ -200,4 +200,6 @@ function timeline(
       playerStart();
     }
   });
+
+  return {playerPause, playerStart};
 }

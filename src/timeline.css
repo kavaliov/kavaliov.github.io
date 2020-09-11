@@ -6,27 +6,16 @@
   box-sizing: border-box;
 }
 
-pre {
-  font-family: monospace;
-  width: 640px;
-  margin: 0 auto;
-  background: #f5f2f0;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
 .timelineWrapper {
-  width: 640px;
+  width: 100%;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 auto 20px;
 }
 
 .timelineWrapper .timelineImage {
   display: block;
-  border: 2px solid #006c96;
   border-top: 0;
 }
 
@@ -42,21 +31,18 @@ pre {
 
 .timelineWrapper .periodTitle {
   text-align: center;
-  font-size: 21px;
+  font-size: 18px;
   padding: 10px 0;
-  border: 2px solid #006c96;
   border-bottom: 0;
-  border-radius: 5px 5px 0 0;
-  background: rgb(112,137,156);
-  background: linear-gradient(0deg, rgba(112,137,156,1) 0%, rgba(0,108,150,1) 100%);
-  color: white;
-  text-shadow: 1px 1px 0 black;
   text-transform: uppercase;
+  border-top: 1px solid #cecece;
 }
 
 .timelineWrapper .controlsWrapper {
   display: flex;
   margin-top: 10px;
+  padding: 0 10px;
+  align-items: center;
 }
 
 .timelineWrapper .controlsWrapper .rangeControl {
@@ -64,9 +50,9 @@ pre {
 }
 
 .timelineWrapper .controlsWrapper .playButton {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 47px;
+  height: 40px;
+  border-radius: 5px;
   margin-right: 10px;
   font-size: 13px;
   border: 2px solid #006c96;

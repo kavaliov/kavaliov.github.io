@@ -2,118 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Timeline</title>
+  <title>World map</title>
   <link href="src/timeline.css" rel="stylesheet" type="text/css">
+  <link href="src/map.css" rel="stylesheet" type="text/css">
   <script src="src/timeline.js"></script>
+  <script src="src/map.js"></script>
 </head>
 <body>
-<div style="display: flex">
-  <div style="flex: 1; padding: 0 20px;">
-    <div id="timeline"></div>
-    <pre>
-    <b>Summary:</b>
-    Pictures Size = <b>14.7MB</b>
+  <div id="map-wrapper">
+    <img id="map" src="media/map.png" alt="">
+    <button class="point" data-point="INT3D-4"></button>
+    <button class="point" data-point="INT3D-5"></button>
+    <button class="point" data-point="INT3D-6"></button>
+    <button class="point" data-point="INT3D-7"></button>
+    <button class="point" data-point="INT3D-9"></button>
+    <button class="point" data-point="INT3D-10"></button>
 
-    frameCount = 570,
-    fps = 30,
-    autoPlay = true,
-    loop = false,
-    </pre>
+    <div id="timeline-wrapper">
+      <button id="closeButton"> <span></span> Return to map</button>
+      <div id="timeline"></div>
+    </div>
   </div>
-  <div style="flex: 1; padding: 0 20px;">
-    <div id="timeline15fps"></div>
-    <pre>
-    <b>Summary:</b>
-    Pictures Size = <b>7.4MB</b>
-
-    frameCount = 285,
-    fps = 15,
-    autoPlay = true,
-    loop = false,
-    </pre>
-  </div>
-</div>
 </body>
-<script>
-  timeline({
-    containerId: "timeline",
-    framesFolder: "plate",
-    fps: 30,
-    framesCount: 570,
-    firstFrameName: "Convergent_Plate_Boundaries_Continental-Continental.0000.jpg",
-    periods: {
-      0: "50 million years ago",
-      11: "49 million years ago",
-      22: "48 million years ago",
-      33: "47 million years ago",
-      44: "46 million years ago",
-      55: "45 million years ago",
-      66: "44 million years ago",
-      77: "43 million years ago",
-      88: "42 million years ago",
-      99: "41 million years ago",
-      110: "40 million years ago",
-      132: "38 million years ago",
-      154: "36 million years ago",
-      176: "34 million years ago",
-      198: "32 million years ago",
-      220: "30 million years ago",
-      242: "28 million years ago",
-      264: "26 million years ago",
-      286: "24 million years ago",
-      308: "22 million years ago",
-      330: "20 million years ago",
-      352: "18 million years ago",
-      374: "16 million years ago",
-      396: "14 million years ago",
-      418: "12 million years ago",
-      440: "10 million years ago",
-      462: "8 million years ago",
-      484: "6 million years ago",
-      506: "4 million years ago",
-      528: "2 million years ago",
-      545: "Present Time",
-    }
-  });
-  timeline({
-    containerId: "timeline15fps",
-    framesFolder: "plate15fps",
-    fps: 15,
-    framesCount: 285,
-    firstFrameName: "Convergent_Plate_Boundaries_Continental-Continental.0000.jpg",
-    periods: {
-      0: "50 million years ago",
-      9: "49 million years ago",
-      18: "48 million years ago",
-      27: "47 million years ago",
-      36: "46 million years ago",
-      45: "45 million years ago",
-      54: "44 million years ago",
-      63: "43 million years ago",
-      72: "42 million years ago",
-      81: "41 million years ago",
-      90: "40 million years ago",
-      99: "38 million years ago",
-      108: "36 million years ago",
-      117: "34 million years ago",
-      126: "32 million years ago",
-      135: "30 million years ago",
-      144: "28 million years ago",
-      153: "26 million years ago",
-      162: "24 million years ago",
-      171: "22 million years ago",
-      180: "20 million years ago",
-      189: "18 million years ago",
-      198: "16 million years ago",
-      207: "14 million years ago",
-      216: "12 million years ago",
-      225: "10 million years ago",
-      234: "8 million years ago",
-      243: "6 million years ago",
-      246: "4 million years ago",
-      250: "2 million years ago",
-      260: "Present Time",
-    }
-  });
-</script>
 </html>
