@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8687017b-df4b-4e51-8a69-618b1cbe8f78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8687017b-df4b-4e51-8a69-618b1cbe8f78" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +26,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +48,7 @@
       <workItem from="1596537800948" duration="632000" />
       <workItem from="1596708613282" duration="1362000" />
       <workItem from="1599840023258" duration="17000" />
+      <workItem from="1599840088326" duration="344000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1596151172178</created>
@@ -123,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596709561195</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="map version">
+      <created>1599840189212</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1599840189212</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,20 +151,21 @@
     <MESSAGE value="periods" />
     <MESSAGE value="range style" />
     <MESSAGE value="update periodTitle when changed rangeControl" />
-    <option name="LAST_COMMIT_MESSAGE" value="update periodTitle when changed rangeControl" />
+    <MESSAGE value="map version" />
+    <option name="LAST_COMMIT_MESSAGE" value="map version" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2" timestamp="1596709560893">
+    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2" timestamp="1599840187755">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2/0.23.1920.1008@0.23.1920.1008" timestamp="1596709560893" />
+    <state x="340" y="70" width="1182" height="867" key="CommitChangelistDialog2/0.23.1920.1008@0.23.1920.1008" timestamp="1599840187755" />
     <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose" timestamp="1596709580337">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state x="817" y="457" width="386" height="237" key="Github.Dialog.Accounts.Choose/0.23.1920.1008@0.23.1920.1008" timestamp="1596709580337" />
-    <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1596709573037">
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1599840227129">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1008@0.23.1920.1008" timestamp="1596709573037" />
+    <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1008@0.23.1920.1008" timestamp="1599840227129" />
   </component>
 </project>
